@@ -92,6 +92,11 @@ return {
     config = function()
       require("tokyonight").setup({
         transparent = true,
+        style = "night",
+        styles = {
+          comments = { italic = true },
+          keywords = { italic = true },
+        },
       })
     end,
   },
@@ -99,7 +104,7 @@ return {
     "LazyVim/LazyVim",
     opts = {
       colorscheme = "tokyonight",
-      background_colour = "#000000",
+      background_colour = "#282828",
     },
   },
 }
