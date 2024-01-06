@@ -4,5 +4,7 @@ return {
   event = "BufEnter",
   command = "HardTime",
   dependencies = { "MunifTanjim/nui.nvim", "nvim-lua/plenary.nvim" },
-  opts = {},
+  opts = {
+    disable_mouse = false,
+  },
 }
