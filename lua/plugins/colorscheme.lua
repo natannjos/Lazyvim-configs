@@ -24,7 +24,7 @@ return {
         palette_overrides = {},
         overrides = {},
         dim_inactive = false,
-        transparent_mode = true,
+        transparent_mode = false,
       })
     end,
   },
@@ -43,7 +43,7 @@ return {
         pallete_overrides = {
           bright_green = "#990000",
         },
-        transparent_background = true,
+        transparent_background = false,
         show_end_of_buffer = false,
         term_colors = false,
         dim_inactive = {
@@ -91,7 +91,7 @@ return {
     opts = {},
     config = function()
       require("tokyonight").setup({
-        transparent = true,
+        transparent = false,
         style = "night",
         styles = {
           comments = { italic = true },
@@ -136,7 +136,7 @@ return {
         -- show the '~' characters after the end of buffers
         show_end_of_buffer = true, -- default false
         -- use transparent background
-        transparent_bg = true, -- default false
+        transparent_bg = false, -- default false
         -- set custom lualine background color
         lualine_bg_color = "#44475a", -- default nil
         -- set italic comment
@@ -165,7 +165,7 @@ return {
       require("onedark").setup({
         -- Main options --
         style = "deep", -- Default theme style. Choose between 'dark', 'darker', 'cool', 'deep', 'warm', 'warmer' and 'light'
-        transparent = true, -- Show/hide background
+        transparent = false, -- Show/hide background
         term_colors = true, -- Change terminal color as per the selected theme style
         ending_tildes = false, -- Show the end-of-buffer tildes. By default they are hidden
         cmp_itemkind_reverse = false, -- reverse item kind highlights in cmp menu
