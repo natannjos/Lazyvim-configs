@@ -38,7 +38,7 @@ return {
         flavour = "mocha",
         background = {
           light = "latte",
-          dark = "mocha",
+          dark = "macchiato",
         },
         pallete_overrides = {
           bright_green = "#990000",
@@ -206,7 +206,7 @@ return {
   {
     "LazyVim/LazyVim",
     opts = {
-      colorscheme = "onedark",
+      colorscheme = "catppuccin",
       background_colour = "#282828",
     },
   },
