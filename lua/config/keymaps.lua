@@ -2,5 +2,9 @@
 -- Default keymaps that are always set: https://github.com/LazyVim/LazyVim/blob/main/lua/lazyvim/config/keymaps.lua
 -- Add any additional keymaps here
 
+-- This keymaps is to move lines up and down
+vim.keymap.set("n", "<A-k>", ":m .-2<CR>==")
+vim.keymap.set("n", "<A-j>", ":m .+1<CR>==")
+
 -- This keypam is to run a macro to convert a typesctipt function into a arrow function
 vim.keymap.set("n", "<leader>fa", "0/function<Enter>ciwconst<Esc>f(i = <Esc>f)a => <Esc>")
