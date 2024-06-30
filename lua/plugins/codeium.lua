@@ -1,6 +1,7 @@
 return {
   {
     "Exafunction/codeium.vim",
+    enabled = false,
     lazy = false,
     config = function()
       vim.keymap.set("i", "<C-a>", function()
