@@ -43,7 +43,7 @@ return {
         pallete_overrides = {
           bright_green = "#990000",
         },
-        transparent_background = false,
+        transparent_background = true,
         show_end_of_buffer = false,
         term_colors = false,
         dim_inactive = {
@@ -308,9 +308,74 @@ return {
   },
   { "savq/melange-nvim" },
   {
+    "rose-pine/neovim",
+    name = "rose-pine",
+    lazy = false,
+    priority = 1000,
+
+    config = function()
+      require("rose-pine").setup({
+        variant = "moon", -- auto, main, moon, or dawn
+        dark_variant = "moon", -- main, moon, or dawn
+        dim_inactive_windows = false,
+        extend_background_behind_borders = true,
+
+        enable = {
+          terminal = true,
+          legacy_highlights = true, -- Improve compatibility for previous versions of Neovim
+          migrations = true, -- Handle deprecated options automatically
+        },
+
+        styles = {
+          bold = true,
+          italic = true,
+          transparency = false,
+        },
+        highlight_groups = {
+          Comment = { fg = "foam" },
+          VertSplit = { fg = "muted", bg = "muted" },
+          CursorLine = { bg = "surface" },
+          CursorLineNr = { fg = "foam" },
+          LineNr = { fg = "muted" },
+          SignColumn = { bg = "surface" },
+          ColorColumn = { bg = "surface" },
+          Normal = { fg = "foam", bg = "surface" },
+          NormalNC = { fg = "foam", bg = "surface" },
+          Pmenu = { bg = "surface" },
+          PmenuSel = { bg = "foam" },
+          PmenuSbar = { bg = "surface" },
+          WildMenu = { bg = "foam" },
+          TabLine = { bg = "surface", fg = "foam" },
+          TabLineSel = { bg = "foam", fg = "surface" },
+          TabLineFill = { bg = "surface" },
+          StatusLine = { bg = "surface", fg = "foam" },
+          StatusLineNC = { bg = "surface", fg = "muted" },
+          Visual = { bg = "surface" },
+          Directory = { fg = "foam" },
+          DiffAdd = { bg = "surface" },
+          DiffChange = { bg = "surface" },
+          DiffDelete = { bg = "surface" },
+          DiffText = { bg = "surface" },
+          ErrorMsg = { fg = "rose", bg = "surface" },
+          WarningMsg = { fg = "flamingo", bg = "surface" },
+          MoreMsg = { fg = "foam", bg = "surface" },
+          ModeMsg = { fg = "foam", bg = "surface" },
+          Question = { fg = "foam", bg = "surface" },
+          Todo = { fg = "foam", bg = "surface" },
+          Search = { bg = "foam" },
+          IncSearch = { bg = "foam" },
+          MatchParen = { fg = "foam", bg = "surface" },
+          NonText = { fg = "muted" },
+          Whitespace = { fg = "muted" },
+          SpecialKey = { fg = "muted" },
+        },
+      })
+    end,
+  },
+  {
     "LazyVim/LazyVim",
     opts = {
-      colorscheme = "kanagawa",
+      colorscheme = "catppuccin",
       background_colour = "#282828",
     },
   },
