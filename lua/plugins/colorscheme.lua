@@ -43,7 +43,7 @@ return {
         pallete_overrides = {
           bright_green = "#990000",
         },
-        transparent_background = true,
+        transparent_background = false,
         show_end_of_buffer = false,
         term_colors = false,
         dim_inactive = {
@@ -61,7 +61,7 @@ return {
           functions = { "bold", "italic", "altfont" },
           keywords = { "bold" },
           strings = { "altfont", "italic" },
-          variables = { "bold" },
+          variables = { "bold", "altfont" },
           numbers = {},
           booleans = {},
           properties = {},
@@ -80,22 +80,6 @@ return {
             enabled = true,
             indentscope_color = "",
           },
-        },
-      })
-    end,
-  },
-  {
-    "folke/tokyonight.nvim",
-    lazy = false,
-    priority = 1000,
-    opts = {},
-    config = function()
-      require("tokyonight").setup({
-        transparent = false,
-        style = "night",
-        styles = {
-          comments = { italic = true },
-          keywords = { italic = true },
         },
       })
     end,
@@ -136,7 +120,7 @@ return {
         -- show the '~' characters after the end of buffers
         show_end_of_buffer = true, -- default false
         -- use transparent background
-        transparent_bg = true, -- default false
+        transparent_bg = false, -- default false
         -- set custom lualine background color
         lualine_bg_color = "#44475a", -- default nil
         -- set italic comment
@@ -165,7 +149,7 @@ return {
       require("onedark").setup({
         -- Main options --
         style = "deep", -- Default theme style. Choose between 'dark', 'darker', 'cool', 'deep', 'warm', 'warmer' and 'light'
-        transparent = true, -- Show/hide background
+        transparent = false, -- Show/hide background
         term_colors = true, -- Change terminal color as per the selected theme style
         ending_tildes = false, -- Show the end-of-buffer tildes. By default they are hidden
         cmp_itemkind_reverse = false, -- reverse item kind highlights in cmp menu
@@ -204,9 +188,129 @@ return {
     end,
   },
   {
+    "sainnhe/everforest",
+    lazy = false,
+    priority = 1000,
+    config = function()
+      -- Optionally configure and load the colorscheme
+      -- directly inside the plugin declaration.
+      vim.g.everforest_enable_italic = true
+      vim.g.everfores_background = "hard"
+    end,
+  },
+  {
+    "scottmckendry/cyberdream.nvim",
+    lazy = false,
+    priority = 1000,
+    config = function()
+      require("cyberdream").setup({
+        -- Enable transparent background
+        transparent = false,
+
+        -- Enable italics comments
+        italic_comments = true,
+
+        -- Replace all fillchars with ' ' for the ultimate clean look
+        hide_fillchars = false,
+
+        -- Modern borderless telescope theme - also applies to fzf-lua
+        borderless_telescope = true,
+
+        -- Set terminal colors used in `:terminal`
+        terminal_colors = true,
+
+        theme = {
+          variant = "default", -- use "light" for the light variant. Also accepts "auto" to set dark or light colors based on the current value of `vim.o.background`
+          highlights = {
+            -- Highlight groups to override, adding new groups is also possible
+            -- See `:h highlight-groups` for a list of highlight groups or run `:hi` to see all groups and their current values
+
+            -- Example:
+            Comment = { fg = "#696969", bg = "NONE", italic = true },
+
+            -- Complete list can be found in `lua/cyberdream/theme.lua`
+          },
+
+          -- Override a highlight group entirely using the color palette
+          overrides = function(colors) -- NOTE: This function nullifies the `highlights` option
+            -- Example:
+            return {
+              Comment = { fg = colors.green, bg = "NONE", italic = true },
+              ["@property"] = { fg = colors.magenta, bold = true },
+            }
+          end,
+
+          -- Override a color entirely
+          colors = {
+            -- For a list of colors see `lua/cyberdream/colours.lua`
+            -- Example:
+            -- bg = "#000000",
+            green = "#00ff00",
+            -- magenta = "#ff00ff",
+          },
+        },
+
+        -- Disable or enable colorscheme extensions
+        extensions = {
+          telescope = true,
+          notify = true,
+          mini = true,
+        },
+      })
+    end,
+  },
+  {
+    "rebelot/kanagawa.nvim",
+    lazy = false,
+    priority = 1000,
+    config = function()
+      require("kanagawa").setup({
+        -- your configuration comes here
+        -- or leave it empty to use the default settings
+        -- refer to the configuration section below
+        --
+        -- comments = { "italic", "altfont" },
+        -- conditionals = { "italic" },
+        -- loops = {},
+        -- functions = { "bold", "italic", "altfont" },
+        -- keywords = { "bold" },
+        -- strings = { "altfont", "italic" },
+        -- variables = { "bold", "altfont" },
+        compile = false, -- enable compiling the colorscheme
+        undercurl = true, -- enable undercurls
+        commentStyle = { italic = true, altfont = true },
+        functionStyle = {
+          bold = true,
+          italic = true,
+          altfont = true,
+        },
+        keywordStyle = {
+          bold = true,
+        },
+        statementStyle = { bold = true, altfont = true },
+        typeStyle = {
+          altfont = true,
+        },
+        transparent = false, -- do not set background color
+        dimInactive = false, -- dim inactive window `:h hl-NormalNC`
+        terminalColors = true, -- define vim.g.terminal_color_{0,17}
+        colors = { -- add/modify theme and palette colors
+          palette = {},
+          theme = { wave = {}, lotus = {}, dragon = {}, all = {} },
+        },
+        theme = "wave", -- Load "wave" theme when 'background' option is not set
+        background = { -- map the value of 'background' option to a theme
+          dark = "wave", -- try "dragon" !
+          light = "lotus",
+        },
+      })
+    end,
+  },
+  { "savq/melange-nvim" },
+  {
     "LazyVim/LazyVim",
     opts = {
-      colorscheme = "catppuccin",
+      colorscheme = "kanagawa",
       background_colour = "#282828",
     },
   },
