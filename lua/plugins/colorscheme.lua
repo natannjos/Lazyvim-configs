@@ -373,6 +373,22 @@ return {
     end,
   },
   {
+    {
+      "maxmx03/fluoromachine.nvim",
+      lazy = false,
+      priority = 1000,
+      config = function()
+        local fm = require("fluoromachine")
+
+        fm.setup({
+          glow = false,
+          theme = "fluoromachine",
+          transparent = true,
+        })
+      end,
+    },
+  },
+  {
     "LazyVim/LazyVim",
     opts = {
       colorscheme = "catppuccin",
