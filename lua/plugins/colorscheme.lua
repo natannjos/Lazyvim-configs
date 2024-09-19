@@ -43,7 +43,7 @@ return {
         pallete_overrides = {
           bright_green = "#990000",
         },
-        transparent_background = true,
+        transparent_background = false,
         show_end_of_buffer = false,
         term_colors = false,
         dim_inactive = {
@@ -120,7 +120,7 @@ return {
         -- show the '~' characters after the end of buffers
         show_end_of_buffer = true, -- default false
         -- use transparent background
-        transparent_bg = true, -- default false
+        transparent_bg = false, -- default false
         -- set custom lualine background color
         lualine_bg_color = "#44475a", -- default nil
         -- set italic comment
@@ -171,7 +171,7 @@ return {
 
         -- Lualine options --
         lualine = {
-          transparent = true, -- lualine center bar transparency
+          transparent = false, -- lualine center bar transparency
         },
 
         -- Custom Highlights --
