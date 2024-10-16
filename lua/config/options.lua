@@ -14,3 +14,4 @@ opt.listchars = {
   eol = "¬", -- Character for end of line
   space = "·", -- Character for space
 }
+

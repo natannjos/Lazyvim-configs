@@ -81,3 +81,16 @@ require("lazy").setup({
     },
   },
 })
+
+require("telescope").setup({
+  defaults = {
+    find_command = {
+      "rg",
+      "--files",
+      "--hidden",
+      "--glob",
+      "!.git/*",
+      "no-ignore-vcs",
+    },
+  },
+})
