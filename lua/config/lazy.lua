@@ -111,3 +111,5 @@ nvim_lsp.denols.setup({
     },
   },
 })
+
+vim.opt.spell = false
