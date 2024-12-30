@@ -389,9 +389,63 @@ return {
     },
   },
   {
+    {
+      "marko-cerovac/material.nvim",
+
+      lazy = false,
+      priority = 1000,
+      config = function()
+        require("material").setup({
+          disable = {
+            background = true,
+          },
+          -- your configuration comes here
+          -- or leave it empty to use the default settings
+          -- refer to the configuration section below
+          -- colors = {
+          --   dark = { }, -- override the dark color palette
+          --   light = { }, -- override the light color palette
+          -- },
+          -- options = {
+          --   -- your configuration comes here
+          --   -- or leave it empty to use the default settings
+          --   -- refer to the configuration section below
+          --   bold = true, -- bold text
+          --   italic = true, -- italic text
+          --   underline = true, -- underline text
+          --   undercurl = true, -- undercurl text
+          --   inverse = true, -- inverse background
+          --   invert_selection = true, -- invert visual selection
+          --   invert_signs = true, -- invert signs
+          --   invert_tabline = true, -- invert tabline
+          --   invert_intend_guides = true, -- invert intend guides
+          --   contrast = '
+          --
+          --}
+        })
+      end,
+    },
+  },
+  {
     "LazyVim/LazyVim",
     opts = {
-      colorscheme = "catppuccin",
+      -- colorscheme = "catppuccin",
+      -- colorscheme = "rose-pine",
+      -- colorscheme = "tokyonight",
+      -- colorscheme = "onedark",
+      -- colorscheme = "nord",
+      -- colorscheme = "kanagawa",
+      -- colorscheme = "gruvbox",
+      -- colorscheme = "github_dark",
+      -- colorscheme = "github_light",
+      -- colorscheme = "monokai",
+      -- colorscheme = "oceanicnext",
+      -- colorscheme = "one_light",
+      -- colorscheme = "palenight",
+      -- colorscheme = "solarized",
+      -- colorscheme = "everforest",
+      -- colorscheme = "blossom",
+      colorscheme = "material",
       background_colour = "#282828",
     },
   },
