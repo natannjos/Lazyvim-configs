@@ -43,7 +43,7 @@ return {
         pallete_overrides = {
           bright_green = "#990000",
         },
-        transparent_background = true,
+        transparent_background = false,
         show_end_of_buffer = true,
         term_colors = false,
         dim_inactive = {
@@ -315,7 +315,7 @@ return {
 
     config = function()
       require("rose-pine").setup({
-        variant = "moon", -- auto, main, moon, or dawn
+        variant = "main", -- auto, main, moon, or dawn
         dark_variant = "moon", -- main, moon, or dawn
         dim_inactive_windows = false,
         extend_background_behind_borders = true,
@@ -443,9 +443,9 @@ return {
       -- colorscheme = "one_light",
       -- colorscheme = "palenight",
       -- colorscheme = "solarized",
-      -- colorscheme = "everforest",
+      colorscheme = "everforest",
       -- colorscheme = "blossom",
-      colorscheme = "material",
+      -- colorscheme = "material",
       background_colour = "#282828",
     },
   },
