@@ -36,16 +36,16 @@ return {
     config = function()
       require("catppuccin").setup({
         flavour = "mocha",
-        background = {
-          light = "latte",
-          dark = "macchiato",
-        },
+        -- background = {
+        --   light = "latte",
+        --   dark = "macchiato",
+        -- },
         pallete_overrides = {
           bright_green = "#990000",
         },
         transparent_background = false,
         show_end_of_buffer = true,
-        term_colors = false,
+        -- term_colors = false,
         dim_inactive = {
           enabled = false,
           shade = "dark",
@@ -429,7 +429,7 @@ return {
   {
     "LazyVim/LazyVim",
     opts = {
-      -- colorscheme = "catppuccin",
+      colorscheme = "catppuccin",
       -- colorscheme = "rose-pine",
       -- colorscheme = "tokyonight",
       -- colorscheme = "onedark",
@@ -443,10 +443,10 @@ return {
       -- colorscheme = "one_light",
       -- colorscheme = "palenight",
       -- colorscheme = "solarized",
-      colorscheme = "everforest",
+      -- colorscheme = "everforest",
       -- colorscheme = "blossom",
       -- colorscheme = "material",
-      background_colour = "#282828",
+      -- background_colour = "#282828",
     },
   },
 }
