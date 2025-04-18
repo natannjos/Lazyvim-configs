@@ -35,7 +35,7 @@ return {
     priority = 1000,
     config = function()
       require("catppuccin").setup({
-        flavour = "mocha",
+        flavour = "macchiato",
         -- background = {
         --   light = "latte",
         --   dark = "macchiato",
@@ -43,7 +43,7 @@ return {
         pallete_overrides = {
           bright_green = "#990000",
         },
-        transparent_background = false,
+        transparent_background = true,
         show_end_of_buffer = true,
         -- term_colors = false,
         dim_inactive = {
@@ -205,7 +205,7 @@ return {
     config = function()
       require("cyberdream").setup({
         -- Enable transparent background
-        transparent = true,
+        transparent = false,
 
         -- Enable italics comments
         italic_comments = true,
@@ -383,7 +383,7 @@ return {
         fm.setup({
           glow = false,
           theme = "fluoromachine",
-          transparent = true,
+          transparent = false,
         })
       end,
     },
